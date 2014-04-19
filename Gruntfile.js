@@ -22,7 +22,7 @@ module.exports = function(grunt){
         'node_modules/stik.js/stik-labs.js'
       ].concat(srcFiles),
       options: {
-        specs: '*_spec.js'
+        specs: 'specs/*_spec.js'
       }
     },
     concat: {
