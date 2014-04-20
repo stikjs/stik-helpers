@@ -5,7 +5,7 @@
 //            See https://github.com/stikjs/stik-helpers/blob/master/LICENSE
 // ==========================================================================
 
-// Version: 1.0.0 | From: 19-04-2014
+// Version: 0.1.0 | From: 21-04-2014
 
 (function(){
   var helpers = {},
@@ -74,12 +74,6 @@ window.stik.helper( "debounce", function(){
       timeout = setTimeout( later, wait );
       if ( callNow ) func.apply( context, args );
     };
-  };
-});
-
-window.stik.helper( "goTo", function( $window ){
-  return function goTo( url ){
-    $window.location = url;
   };
 });
 

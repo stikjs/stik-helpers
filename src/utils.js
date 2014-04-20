@@ -22,12 +22,6 @@ window.stik.helper( "debounce", function(){
   };
 });
 
-window.stik.helper( "goTo", function( $window ){
-  return function goTo( url ){
-    $window.location = url;
-  };
-});
-
 window.stik.helper( "deepExtend", function(){
   return function deepExtend( destination, source ){
     for ( var property in source ) {

@@ -1,6 +1,6 @@
 {
   "name": "stik-helpers.js",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A set of functional tools to help write better code on Stik.js",
   "main": "stik-helpers.js",
   "scripts": {
@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/stikjs/stik-helpers",
   "dependencies": {
-    "stik.js": "1.0.0-alpha"
+    "stik.js": "1.x"
   },
   "devDependencies": {
-    "stik-labs.js": "1.0.0",
+    "stik-labs.js": "0.x",
     "grunt": "~0.4.2",
     "grunt-cli": "~0.1.11",
     "grunt-contrib-uglify": "~0.2.7",
