@@ -1,9 +1,9 @@
-##Helpers
+#Helpers
 Helpers can be used as a shortcut to create small functional pieces of code.
 
 All defined helpers reside under the **$h** module that can be injected into controllers, behaviors and boundaries.
 
-###Defining
+##Defining
 ```javascript
 // this helper does not have dependencies
 stik.helper("hasClass", function(){
@@ -26,7 +26,7 @@ stik.helper("toggleClass", function(hasClass){
 });
 ```
 
-###Using it
+##Using it
 ```javascript
 stik.controller("AppCtrl", "List", function($template, $h){
   $h.toggleClass($template, "stik-is-awesome");
@@ -57,7 +57,7 @@ stik.boundary({
 ```
 
 
-###$window
+##$window
 Allows you to mock the window global obj
 ```javascript
 stik.behavior("someWindowDependentBehavior", function($window){
@@ -73,7 +73,7 @@ stik.helper("clearTimeout", function($window){
 });
 ```
 
-###debounce
+##debounce
 Debouncing ensures that a method gets executed only once, during the specified interval, even if several calls were triggered.
 
 ```javascript
@@ -87,7 +87,7 @@ stik.behavior("shineOnMouseMove", function($h, $template){
 });
 ```
 
-###deepExtend
+##deepExtend
 Gives you the ability to deep copy all properties and values from one object to another.
 
 ```javascript
