@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/stikjs/stik-helpers",
   "dependencies": {
-    "stik.js": "1.x"
+    "stik-core.js": "1.x"
   },
   "devDependencies": {
     "stik-labs.js": "0.x",
