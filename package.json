@@ -1,6 +1,6 @@
 {
   "name": "stik-helpers.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A set of functional tools to help write better code on Stik.js",
   "main": "stik-helpers.js",
   "scripts": {
