@@ -35,3 +35,17 @@ window.stik.helper( "deepExtend", function(){
     return destination;
   };
 });
+
+window.stik.helper( "zip", function(){
+  return function(firstArray, secondArray){
+    var matrix = [];
+
+    for (var i = 0; i < firstArray.length; i++) {
+      matrix.push([]);
+      matrix[i].push(firstArray[i]);
+      matrix[i].push(secondArray[i]);
+    }
+
+    return matrix;
+  }
+});

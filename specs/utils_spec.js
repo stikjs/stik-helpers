@@ -109,4 +109,19 @@ describe("utils", function(){
       expect(original.calls.length).toEqual(2);
     });
   });
+
+  describe("zip", function(){
+    it("should merge two arrays into a matrix", function(){
+      var firstArray = [1,2,3];
+      var secondArray = [4,5,6];
+
+      var zip = stik.labs.helper({
+        name: "zip"
+      }).run();
+
+      expect(
+        zip(firstArray, secondArray)
+      ).toEqual([[1,4],[2,5],[3,6]]);
+    });
+  });
 });
