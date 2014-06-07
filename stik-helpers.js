@@ -5,7 +5,7 @@
 //            See https://github.com/stikjs/stik-helpers/blob/master/LICENSE
 // ==========================================================================
 
-// Version: 0.2.0 | From: 13-05-2014
+// Version: 0.3.0 | From: 07-06-2014
 
 (function(){
   var helpers = {},
@@ -57,6 +57,12 @@ window.stik.boundary( { as: "$window", to: window } );
 
 window.stik.helper( "$window", function(){
   return window;
+});
+
+window.stik.helper( "isArray", function(){
+  return function isArray( obj ){
+    return Object.prototype.toString.call( obj ) === "[object Array]"
+  }
 });
 
 window.stik.helper( "debounce", function(){

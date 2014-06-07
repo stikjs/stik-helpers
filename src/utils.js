@@ -4,6 +4,12 @@ window.stik.helper( "$window", function(){
   return window;
 });
 
+window.stik.helper( "isArray", function(){
+  return function isArray( obj ){
+    return Object.prototype.toString.call( obj ) === "[object Array]"
+  }
+});
+
 window.stik.helper( "debounce", function(){
   return function debounce( func, wait, immediate ){
     // copied from underscore.js

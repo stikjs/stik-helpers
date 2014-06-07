@@ -9,6 +9,24 @@ describe("utils", function(){
     });
   });
 
+  describe("isArray", function(){
+    it("should be true for an array", function(){
+      var isArray = stik.labs.helper({
+        name: "isArray"
+      }).run();
+
+      expect(isArray(["123eds"])).toBeTruthy();
+    });
+
+    it("should be false for a string", function(){
+      var isArray = stik.labs.helper({
+        name: "isArray"
+      }).run();
+
+      expect(isArray("lakjnsd")).toBeFalsy();
+    });
+  });
+
   describe("debounce", function(){
     it("should return a function", function(){
       function original(){}
