@@ -1,13 +1,13 @@
-(function(){
+(function( stik ){
   var helpers = {},
       modules = {},
       tmpDependencies = {};
 
-  window.stik.helper = function helper( as, func ){
+  stik.helper = function helper( as, func ){
     if ( !as ) { throw "Stik: Helper needs a name"; }
     if ( !func || typeof func !== "function" ) { throw "Stik: Helper needs a function"; }
 
-    modules[ as ] = window.stik.injectable({
+    modules[ as ] = stik.injectable({
       module: func,
       resolvable: true
     });
@@ -31,7 +31,7 @@
 
   helpers.pushDoubles = function pushDoubles( doubles ){
     for ( var name in doubles ) {
-      tmpDependencies[ name ] = window.stik.injectable({
+      tmpDependencies[ name ] = stik.injectable({
         module: doubles[ name ]
       });
     }
@@ -41,5 +41,5 @@
     tmpDependencies = {};
   };
 
-  window.stik.boundary( { as: "$h", to: helpers } );
-}());
+  stik.boundary( { as: "$h", to: helpers } );
+}( window.stik ));

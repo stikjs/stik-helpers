@@ -1,3 +1,7 @@
+require("./spec_helper");
+
+var stik = window.stik;
+
 describe("utils", function(){
   describe("$window", function(){
     it("should pass in the global window object through a boundary", function(){
@@ -104,6 +108,7 @@ describe("utils", function(){
       runs(function(){
         expect(original.calls.length).toEqual(1);
       });
+      done();
     });
   });
 
@@ -114,11 +119,11 @@ describe("utils", function(){
       name: "debounce"
     }).run();
 
-    var debounced = debounce(original, 30);
+    var debounced = debounce(original, 20);
 
     runs(function(){
       debounced();
-      setTimeout(debounced, 60);
+      setTimeout(debounced, 40);
     });
 
     waits(100);
