@@ -59,15 +59,15 @@
 
   stik.helper( "zip", function(){
     return function(firstArray, secondArray){
-      var matrix = [];
+      var mergedArray = [];
 
       for (var i = 0; i < firstArray.length; i++) {
-        matrix.push([]);
-        matrix[i].push(firstArray[i]);
-        matrix[i].push(secondArray[i]);
+        mergedArray.push([]);
+        mergedArray[i].push(firstArray[i]);
+        mergedArray[i].push(secondArray[i]);
       }
 
-      return matrix;
+      return mergedArray;
     }
   });
 })( window.stik );

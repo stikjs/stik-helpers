@@ -78,12 +78,25 @@ Debouncing ensures that a method gets executed only once, during the specified i
 
 ```javascript
 stik.behavior("shineOnMouseMove", function($h, $template){
-  shineFunc.bind({}, $template);
+  function shine(){
+    ...
+  }
+  shine.bind({}, $template);
 
   // the `shineThis` function will only be called
   // once within 500ms even if the browser triggers
   // 100+ mouse events
-  $template.addEventListener("mousemove", $h.debounce(shineThis, 500));
+  $template.addEventListener("mousemove", $h.debounce(shine, 500));
+});
+```
+
+##isArray
+Returns true or false for wether the obj is an instance of Array
+
+```javascript
+stik.controller("AppCtrl", "List", function($h){
+  $h.isArray([1,2,3]); // true
+  $h.isArray({"a": 1}); // false
 });
 ```
 
@@ -99,5 +112,17 @@ stik.controller("AppCtrl", "Post", function($h, httpGet){
   $h.deepExtend currentPost, anotherPost
   // currentPost will have all new properties
   // and values from anotherPost
+});
+```
+
+##zip
+Merges two arrays into a third
+
+```javascript
+stik.controller("AppCtrl", "List", function($h){
+  var firstArray = [1,2,3];
+  var secondArray = [4,5,6];
+
+  $h.zip(firstArray, secondArray); // [1,2,3,4,5,6]
 });
 ```
