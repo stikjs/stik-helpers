@@ -1,11 +1,4 @@
-// ==========================================================================
-// Project:   Stik Helpers - Functional helpers for Stik.js
-// Copyright: Copyright 2013-2014 Lukas Alexandre
-// License:   Licensed under MIT license
-//            See https://github.com/stikjs/stik-helpers/blob/master/LICENSE
-// ==========================================================================
-
-// Version: 0.3.0 | From: 07-06-2014
+// Version: 0.3.0 | From: 24-06-2014
 
 (function(){
   var helpers = {},
@@ -95,6 +88,20 @@ window.stik.helper( "deepExtend", function(){
     }
     return destination;
   };
+});
+
+window.stik.helper( "promise", function(){
+  return function Promise(){
+    return {
+      fail: function (callback) {
+        this.reject = callback;
+      },
+      then: function (callback, callback1) {
+        this.resolve = callback;
+        callback1 !== undefined ? this.reject = callback1 : false;
+      }
+    }
+  }
 });
 
 window.stik.helper( "zip", function(){
