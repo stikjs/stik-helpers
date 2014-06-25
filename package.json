@@ -1,5 +1,5 @@
 {
-  "name": "stik-helpers.js",
+  "name": "stik-helpers",
   "version": "0.4.0",
   "description": "A set of functional tools to help write better code on Stik.js",
   "main": "dist/stik-helpers.js",
@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/stikjs/stik-helpers",
   "dependencies": {
-    "stik-core.js": "^1.0.2"
+    "stik-core": "^1.0.3"
   },
   "devDependencies": {
-    "stik-labs.js": "0.x",
+    "stik-labs": "^0.2.0",
     "gulp-jasmine": "^0.2.0",
     "gulp-header": "^1.0.2",
     "gulp-concat": "^2.2.0",
