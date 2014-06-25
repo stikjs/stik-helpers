@@ -90,20 +90,6 @@
     };
   });
 
-  stik.helper( "promise", function(){
-    return function Promise(){
-      return {
-        fail: function (callback) {
-          this.reject = callback;
-        },
-        then: function (callback, callback1) {
-          this.resolve = callback;
-          callback1 !== undefined ? this.reject = callback1 : false;
-        }
-      }
-    }
-  });
-
   stik.helper( "zip", function(){
     return function(firstArray, secondArray){
       var mergedArray = [];
